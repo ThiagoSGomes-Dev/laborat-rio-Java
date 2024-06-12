@@ -1,8 +1,20 @@
 import entity.EnfermeiroEntity;
+import mensagem.MsnMessage;
+import mensagem.ServicoMensagem;
 
 public class Main {
     public static void main(String[] args) {
-        EnfermeiroEntity pessoaEnfermeiro = new EnfermeiroEntity("João", "27", 200000-9, "08:00-12:00/14:00-17:00", "Enfermaria", 15);
-        System.out.println(pessoaEnfermeiro.toString());
+        System.out.println("Messenger");
+        MsnMessage sysMessage = new MsnMessage();
+        sysMessage.enviarMensagem();
+        sysMessage.receberMensagem();git
+        System.out.println("Facebook");
+        MsnMessage sysFacebook = new MsnMessage();
+        sysMessage.enviarMensagem();
+        sysMessage.receberMensagem();
+        System.out.println("Instagram");
+        MsnMessage sysInstagram = new MsnMessage();
+        sysMessage.enviarMensagem();
+        sysMessage.receberMensagem();
     }
 }
