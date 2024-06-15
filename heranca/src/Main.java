@@ -1,20 +1,26 @@
-import entity.EnfermeiroEntity;
-import mensagem.MsnMessage;
+import mensagem.MsnFacebook;
+import mensagem.MsnInstagram;
+import mensagem.MsnMessenger;
 import mensagem.ServicoMensagem;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Messenger");
-        MsnMessage sysMessage = new MsnMessage();
-        sysMessage.enviarMensagem();
-        sysMessage.receberMensagem();git
-        System.out.println("Facebook");
-        MsnMessage sysFacebook = new MsnMessage();
-        sysMessage.enviarMensagem();
-        sysMessage.receberMensagem();
-        System.out.println("Instagram");
-        MsnMessage sysInstagram = new MsnMessage();
-        sysMessage.enviarMensagem();
-        sysMessage.receberMensagem();
+        ServicoMensagem smi = null;
+
+		/*
+		    NÃO SE SABE QUAL APP
+		    MAS QUALQUER UM DEVERÁ ENVIAR E RECEBER MENSAGEM
+		 */
+        String appEscolhido="fbm";
+
+        if(appEscolhido.equals("msn"))
+            smi = new MsnMessenger();
+        else if(appEscolhido.equals("fbm"))
+            smi = new MsnFacebook();
+        else if(appEscolhido.equals("tlg"))
+            smi = new MsnInstagram();
+
+        smi.enviarMensagem();
+        smi.receberMensagem();
     }
 }

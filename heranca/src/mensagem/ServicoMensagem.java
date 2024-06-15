@@ -1,17 +1,13 @@
 package mensagem;
 
 //a classe MSNMessenger é ou representa
-public class ServicoMensagem {
-    public void enviarMensagem() {
+public abstract class ServicoMensagem {
+    public  void enviarMensagem() {
         validarConectadoInternet();
-        System.out.println("Enviando mensagem");
-        salvarHistoricoMensagem();
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem");
+        salvarHistoricoMensagem();
     }
-
-    //métodos privadas, visíveis somente na classe
     private void validarConectadoInternet() {
         System.out.println("Validando se está conectado a internet");
     }
