@@ -2,14 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-
-        String item = null;
-        String[] lista = {entrada.next()};
-        int contador = 0;
-        while (contador < 5 && item.length() > 6) {
-            item = lista[contador];
-            contador++;
-        }
+        String compras = "toDo Lista de compras";
+        ListaParaTarefas listaDeTarefas = new ListaParaTarefas();
+        //Iniciando uma lista vazia;
+        System.out.println("Lista: "+listaDeTarefas.obterNumeroTotalDeTarefas());
+        //Adicionando uma Task;
     }
 }
